@@ -11,7 +11,11 @@ Your CLAUDE.md is sent on **every single API call**. Every token in it costs mon
 | Everything in CLAUDE.md | ~2,000 | ~$0.30 |
 | Lean CLAUDE.md + .claude/rules/ | ~300 | ~$0.05 |
 
-The starter template is ~300 tokens. It includes what Claude Code needs to make good decisions: your stack, your commands, and your rules.
+The starter template is ~400 tokens. It includes what Claude Code needs to make good decisions: your stack, your commands, your rules, and a **verification section** that redefines what "done" means.
+
+## The key section most people miss
+
+The `## Verification` block is the highest-leverage addition to any CLAUDE.md. Without it, Claude's success metric is "did bytes hit disk." With it, "done" means type check passes, tests pass, and lint is clean. See [verification workflows](../verification.md) for the full breakdown.
 
 ## Files
 

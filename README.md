@@ -8,11 +8,11 @@ Every finding here is backed by data from 500+ sessions and 67,000+ API turns. E
 
 ## What we learned the hard way
 
-- **Hooks are the difference between "works on my machine" and production-ready.** Auto-format and lint on every file write. Claude Code sees failures and self-corrects in the same turn. Zero formatting commits, zero lint surprises in PR review. ([setup](ship-quality-code/hooks.md))
-- **Your CLAUDE.md is the single biggest lever on output quality.** A 10-line CLAUDE.md with your stack, commands, and rules beats a 100-line style guide. The rules in `.claude/rules/` load only when relevant -- no wasted context. ([starter kit](ship-quality-code/claude-md-starter/))
-- **5 MCP servers eat 28% of your context window.** That's less room for your actual conversation and code. Fewer, better-chosen tools = better output. ([configs](ship-quality-code/mcp-configs.md))
+- **Add a "Verification" section to your CLAUDE.md.** Without it, Claude's definition of "done" is "bytes hit disk." With it, "done" means tests pass, types check, and lint is clean. This single change eliminates most back-and-forth. ([verification workflows](ship-quality-code/verification.md))
+- **Use a different model to review Claude's code.** Claude reviewing its own output misses the same things twice. The Codex plugin catches critical issues on every run. Two models > one model reviewing itself. ([cross-model review](ship-quality-code/cross-model-review.md))
+- **Hooks enforce quality at 100%, CLAUDE.md at ~70%.** Auto-format and lint on every file write. Claude sees failures and self-corrects in the same turn. Zero formatting commits in PR review. ([hook recipes](ship-quality-code/hooks.md))
+- **Your CLAUDE.md is the single biggest lever on output quality.** A lean CLAUDE.md with verification directives beats a verbose style guide. Rules in `.claude/rules/` load only when relevant. ([starter kit](ship-quality-code/claude-md-starter/))
 - **92% of your spend happens in mega-sessions (80+ turns).** Long sessions don't just cost more -- quality degrades as context fills up. Break work into focused sessions. ([data](stretch-your-limits/findings.md))
-- **Opus uses 37x more tool calls than Sonnet for the same bug fix.** More thorough, but not always better. Match the model to the task. ([data](under-the-hood/tool-use.md))
 
 ## Get more findings like these
 
@@ -26,11 +26,13 @@ We publish weekly deep dives with new experiments, data, and practical takeaways
 
 ### [Ship Quality Code](ship-quality-code/)
 Configs, hooks, and workflows that make Claude Code produce code you'd actually merge.
-- [CLAUDE.md Starter Kit](ship-quality-code/claude-md-starter/) -- battle-tested templates for real projects
+- [CLAUDE.md Starter Kit](ship-quality-code/claude-md-starter/) -- battle-tested templates with verification built in
+- [Verification Workflows](ship-quality-code/verification.md) -- force Claude to prove its work before saying "done"
+- [Cross-Model Review](ship-quality-code/cross-model-review.md) -- use Codex to review Claude's code (and vice versa)
 - [Hook Recipes](ship-quality-code/hooks.md) -- auto-format, auto-lint, block dangerous commands, run tests
 - [MCP Configs](ship-quality-code/mcp-configs.md) -- working .mcp.json setups for web, database, and docs
 - [Before/After Showcases](ship-quality-code/before-after.md) -- what these configs actually change (with data)
-- [Recommended Tools](ship-quality-code/recommendations.md) -- MCP servers and tools we've actually tested
+- [Recommended Tools](ship-quality-code/recommendations.md) -- curated tools ranked by real community engagement
 
 ### [Stretch Your Limits](stretch-your-limits/)
 Get more done per session. Spend your tokens on code, not overhead.

@@ -18,6 +18,22 @@ Next.js 15 with App Router, TypeScript, Tailwind CSS, shadcn/ui, Drizzle ORM, Po
 - Use server components by default, client components only when needed
 - Prefer existing patterns in the codebase over introducing new ones
 
+## Verification
+<!-- This is the highest-leverage section. It redefines what "done" means. -->
+- You are FORBIDDEN from reporting a task as complete until you have:
+  1. Run `bun test` and confirmed all tests pass
+  2. Run `npx tsc --noEmit` and confirmed zero type errors
+  3. Run `bun lint` and confirmed zero lint errors
+- If any check fails, fix the errors before reporting completion
+- Before editing any file, re-read it first to avoid stale context
+- After editing, read the file again to confirm the change applied
+
+## Quality
+<!-- Override Claude's default "try the simplest approach" when quality matters. -->
+- If architecture is flawed or patterns are inconsistent, propose fixes -- don't just patch around them
+- For tasks touching more than 5 files, use sub-agents to avoid context decay
+- After 10+ turns, re-read any file before editing it -- your memory of it may be stale
+
 ## Style
 <!-- Only include if Claude keeps getting it wrong. Most style is learned from context. -->
 - Use named exports, not default exports
