@@ -1,18 +1,18 @@
 # Claude Code Field Guide
 
-Battle-tested findings, configs, and scripts from 500+ hours of experiments with Claude Code.
+How to ship production-quality code with Claude Code.
 
-This is not another awesome list. Every finding here has data behind it, every config has been tested in production, and every recommendation comes with an opinion on why it matters.
+Most people use Claude Code like a chatbot and get chatbot-quality output. This guide is for people who want to ship real code -- tested, formatted, reviewed, and production-ready -- using Claude Code as a serious engineering tool.
 
-## What we found
+Every finding here is backed by data from 500+ sessions and 67,000+ API turns. Every config has been tested in production. Every recommendation comes with an opinion on why it matters.
 
-After running experiments across 500+ sessions and 67,000+ API turns, here's what surprised us:
+## What we learned the hard way
 
-- **92% of your spend happens in mega-sessions.** Sessions over 80 turns consume almost all your budget. The top 15 sessions alone accounted for 25% of total cost. ([details](stretch-your-limits/findings.md))
-- **Prompt caching saves ~$80 per 100-turn session.** Without caching: $50-100. With caching: $10-19. But changing two letters in your CLAUDE.md can break the entire cache. ([details](stretch-your-limits/prompt-caching.md))
-- **5 MCP servers eat 28% of your context window.** Each tool definition costs ~150 tokens. Five MCP servers add ~55K tokens before you type anything. ([details](setup-your-project/mcp-configs.md))
-- **Opus uses 37x more tool calls than Sonnet for the same result.** Same bug, same fix. Opus: 38 tool calls, $0.73. Sonnet: 8 tool calls, $0.04. ([details](understand-the-internals/tool-use.md))
-- **"High" thinking effort is 3.5x slower with no quality gain.** Low, medium, and high effort produced identical code. High just took 210% longer. ([details](understand-the-internals/extended-thinking.md))
+- **Hooks are the difference between "works on my machine" and production-ready.** Auto-format and lint on every file write. Claude Code sees failures and self-corrects in the same turn. Zero formatting commits, zero lint surprises in PR review. ([setup](ship-quality-code/hooks.md))
+- **Your CLAUDE.md is the single biggest lever on output quality.** A 10-line CLAUDE.md with your stack, commands, and rules beats a 100-line style guide. The rules in `.claude/rules/` load only when relevant -- no wasted context. ([starter kit](ship-quality-code/claude-md-starter/))
+- **5 MCP servers eat 28% of your context window.** That's less room for your actual conversation and code. Fewer, better-chosen tools = better output. ([configs](ship-quality-code/mcp-configs.md))
+- **92% of your spend happens in mega-sessions (80+ turns).** Long sessions don't just cost more -- quality degrades as context fills up. Break work into focused sessions. ([data](stretch-your-limits/findings.md))
+- **Opus uses 37x more tool calls than Sonnet for the same bug fix.** More thorough, but not always better. Match the model to the task. ([data](under-the-hood/tool-use.md))
 
 ## Get more findings like these
 
@@ -24,34 +24,34 @@ We publish weekly deep dives with new experiments, data, and practical takeaways
 
 ## Table of Contents
 
+### [Ship Quality Code](ship-quality-code/)
+Configs, hooks, and workflows that make Claude Code produce code you'd actually merge.
+- [CLAUDE.md Starter Kit](ship-quality-code/claude-md-starter/) -- battle-tested templates for real projects
+- [Hook Recipes](ship-quality-code/hooks.md) -- auto-format, auto-lint, block dangerous commands, run tests
+- [MCP Configs](ship-quality-code/mcp-configs.md) -- working .mcp.json setups for web, database, and docs
+- [Before/After Showcases](ship-quality-code/before-after.md) -- what these configs actually change (with data)
+- [Recommended Tools](ship-quality-code/recommendations.md) -- MCP servers and tools we've actually tested
+
 ### [Stretch Your Limits](stretch-your-limits/)
-How to get more out of every session before you hit the wall.
+Get more done per session. Spend your tokens on code, not overhead.
 - [Session Cost Findings](stretch-your-limits/findings.md) -- where your tokens actually go
 - [Prompt Caching](stretch-your-limits/prompt-caching.md) -- how it works, what breaks it
 - [Rate Limit Survival Guide](stretch-your-limits/rate-limits.md) -- why you hit limits fast and how to fix it
 - [Configs That Save Tokens](stretch-your-limits/configs.md) -- copy-paste CLAUDE.md snippets with before/after data
 - [Recommended Tools](stretch-your-limits/recommendations.md) -- tools we actually use for token management
 
-### [Setup Your Project](setup-your-project/)
-Get Claude Code working well from the first session.
-- [CLAUDE.md Starter Kit](setup-your-project/claude-md-starter/) -- battle-tested templates
-- [Hook Recipes](setup-your-project/hooks.md) -- copy-paste hooks for formatting, safety, and automation
-- [MCP Configs](setup-your-project/mcp-configs.md) -- working .mcp.json setups we use daily
-- [Before/After Showcases](setup-your-project/before-after.md) -- what these configs actually change
-- [Recommended Tools](setup-your-project/recommendations.md) -- MCP servers and tools we've tested
-
-### [Understand the Internals](understand-the-internals/)
-How Claude Code actually works under the hood.
-- [Tool Use](understand-the-internals/tool-use.md) -- Claude Code is just a while loop
-- [Extended Thinking](understand-the-internals/extended-thinking.md) -- what you're paying for (and what's hidden)
-- [System Prompt](understand-the-internals/system-prompt.md) -- what Claude Code sends before you type anything
-- [Experiment Scripts](understand-the-internals/scripts/) -- reproduce our findings yourself
+### [Under the Hood](under-the-hood/)
+How Claude Code actually works. Understanding the mechanics helps you use it better.
+- [Tool Use](under-the-hood/tool-use.md) -- Claude Code is just a while loop
+- [Extended Thinking](under-the-hood/extended-thinking.md) -- what you're paying for (and what's hidden)
+- [System Prompt](under-the-hood/system-prompt.md) -- what Claude Code sends before you type anything
+- [Experiment Scripts](under-the-hood/scripts/) -- reproduce our findings yourself
 
 ---
 
 ## Freshness
 
-Every finding is tagged with the Claude Code version and date it was verified. If something says "Verified with Claude Code v2.1.87 on 2026-04-01" that means we tested it on that version on that date. Claude Code ships updates weekly, so findings may drift. If you spot something outdated, [open an issue](../../issues) or send a PR.
+Every finding is tagged with the Claude Code version and date it was verified. Claude Code ships updates weekly, so findings may drift. If you spot something outdated, [open an issue](../../issues) or send a PR.
 
 ## Contributing
 

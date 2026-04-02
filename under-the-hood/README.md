@@ -1,6 +1,6 @@
-# Understand the Internals
+# Under the Hood
 
-How Claude Code actually works under the hood.
+How Claude Code actually works. Understanding the mechanics helps you use it better.
 
 These are condensed findings from experiments we ran by intercepting API traffic, analyzing token flows, and testing edge cases. Each links to the full deep dive with methodology and raw data.
 
