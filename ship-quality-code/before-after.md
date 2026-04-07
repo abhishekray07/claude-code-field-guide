@@ -1,5 +1,7 @@
 # Before/After Showcases
 
+> Verified: Claude Code v2.1.87 | Opus 4.6 | 2026-04-06
+
 Real examples showing what these configs actually change.
 
 ## 1. Monolithic CLAUDE.md vs Lean + Rules

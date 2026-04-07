@@ -1,6 +1,6 @@
 # Session Cost Findings
 
-> Verified with Claude Code v2.1.78-87 on Opus 4.5/4.6 and Sonnet 4.5/4.6. Data from 518 sessions, 67,000+ turns.
+> Verified: Claude Code v2.1.78-87 | Opus 4.5/4.6, Sonnet 4.5/4.6 | 2026-03-15. Data from 518 sessions, 67,000+ turns.
 
 ## The headline
 

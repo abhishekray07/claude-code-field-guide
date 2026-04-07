@@ -1,5 +1,7 @@
 # Hook Recipes
 
+> Verified: Claude Code v2.1.87 | Opus 4.6 | 2026-04-06
+>
 > Copy-paste these into your `.claude/settings.json`. Each hook has been tested in real projects.
 
 Hooks run shell commands before or after Claude Code takes actions. They're the enforcement layer -- unlike CLAUDE.md instructions (which Claude can ignore), hooks are guaranteed to run.

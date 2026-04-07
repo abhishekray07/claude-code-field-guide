@@ -1,5 +1,7 @@
 # Cross-Model Review
 
+> Verified: Claude Code v2.1.87 | Opus 4.6 | 2026-04-06
+>
 > "Every time you run a Codex code review from Claude Code, it finds critical issues. Not 95% of the times, 100%." — David Marcus (2,869 likes)
 
 ## The idea

@@ -1,12 +1,14 @@
 # MCP Configs
 
+> Verified: Claude Code v2.1.87 | Opus 4.6 | 2026-04-06
+>
 > Working .mcp.json configs we use daily. Copy-paste and customize.
 
 ## What is .mcp.json?
 
 MCP (Model Context Protocol) lets Claude Code use external tools -- browsers, databases, APIs, file systems. The `.mcp.json` file in your project root configures which MCP servers are available.
 
-**Important:** Each MCP server adds ~150 tokens of tool definitions to every API call. Five servers = ~55K tokens = 28% of your 200K context window. Only add servers you'll actually use in this project.
+**Important:** Each MCP server adds ~5-15K tokens of tool definitions to every API call. Five servers = ~55K tokens = 28% of your 200K context window. Only add servers you'll actually use in this project. (See [tool-use.md](../under-the-hood/tool-use.md) for the full breakdown.)
 
 ## Project-level config (.mcp.json)
 

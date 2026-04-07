@@ -1,6 +1,6 @@
 # Rate Limit Survival Guide
 
-> Verified with Claude Code v2.1.87, Pro and Max plans. April 2026.
+> Verified: Claude Code v2.1.87 | Opus 4.6, Sonnet 4.6 | 2026-04-01
 
 ## Why you hit limits in 13 minutes
 

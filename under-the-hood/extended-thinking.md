@@ -1,6 +1,6 @@
 # Extended Thinking
 
-> Verified with Claude Sonnet 4.6 and Opus 4.6, Claude Code v2.1.81. Tested March 2026.
+> Verified: Claude Code v2.1.81 | Sonnet 4.6, Opus 4.6 | 2026-03-20
 
 ## The headline
 

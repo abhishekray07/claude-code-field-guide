@@ -1,6 +1,6 @@
 # Prompt Caching
 
-> Verified with Claude Sonnet 4.6, Anthropic SDK v0.69.0. Tested March 2026.
+> Verified: Claude Code v2.1.81 | Sonnet 4.6 | 2026-03-20
 
 ## The headline
 
