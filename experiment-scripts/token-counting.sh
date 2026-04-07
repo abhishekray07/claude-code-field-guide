@@ -60,7 +60,7 @@ if command -v ccusage &> /dev/null; then
     ccusage --summary 2>/dev/null || echo "(ccusage returned an error — may need configuration)"
 else
     echo "ccusage not installed. Install with:"
-    echo "  pip install ccusage"
+    echo "  npm install -g ccusage"
     echo ""
     echo "ccusage reads Claude Code's conversation logs and shows:"
     echo "  - Per-session token breakdown"
@@ -84,7 +84,7 @@ else
     echo ""
     echo "claude-meter provides real-time token monitoring as a dashboard."
     echo ""
-    echo "Docs: https://github.com/jspahrsern/claude-meter"
+    echo "Docs: https://github.com/opslane/claude-meter"
 fi
 echo ""
 

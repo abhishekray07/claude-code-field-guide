@@ -7,8 +7,8 @@
 # Extended thinking tokens are generated but not displayed to you. They still
 # count toward your token budget and billing.
 #
-# Expected output: thinking tokens typically add 20-50% overhead on top of
-# visible output tokens. Exact ratios vary by task complexity.
+# Expected output: thinking tokens are typically 3-10x the visible output
+# tokens. Exact ratios vary by task complexity.
 
 set -euo pipefail
 
@@ -60,7 +60,7 @@ echo "The gap between visible tokens and total output tokens = thinking tokens."
 echo ""
 echo "=== Measuring with ccusage ==="
 echo ""
-echo "If you have ccusage installed (pip install ccusage), you can see"
+echo "If you have ccusage installed (npm install -g ccusage), you can see"
 echo "thinking tokens broken out in the per-session report:"
 echo ""
 echo "  ccusage --detail"
@@ -70,19 +70,14 @@ echo "regular input/output to see the full token picture."
 echo ""
 echo "=== What thinking tokens cost ==="
 echo ""
-echo "On Opus 4:"
-echo "  Input tokens:    \$15/M tokens"
-echo "  Output tokens:   \$75/M tokens"
-echo "  Thinking tokens: \$75/M tokens (same as output)"
-echo ""
-echo "Since thinking tokens are billed at output rates (\$75/M), and they"
-echo "can be 3-10x the visible output, thinking is often the largest"
+echo "Thinking tokens are billed at output token rates (same as visible output)."
+echo "Since they can be 3-10x the visible output, thinking is often the largest"
 echo "single line item in your session cost."
 echo ""
-echo "A 1000-token visible response with 4000 thinking tokens costs:"
-echo "  Visible output: 1000 × \$75/M = \$0.075"
-echo "  Thinking:       4000 × \$75/M = \$0.300"
-echo "  Total output:   \$0.375 (thinking is 80% of output cost)"
+echo "Check current pricing at: https://docs.anthropic.com/en/docs/about-claude/models"
+echo ""
+echo "Example: a 1000-token visible response with 4000 thinking tokens means"
+echo "80% of your output cost went to thinking you never see."
 echo ""
 echo "=== Controlling thinking overhead ==="
 echo ""

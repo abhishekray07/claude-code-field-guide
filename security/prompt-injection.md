@@ -129,13 +129,9 @@ Long sessions (80+ turns) have degraded instruction-following. Start fresh sessi
 
 Only install MCP servers from sources you trust. Each MCP server is a potential injection surface. See [MCP Internals](../under-the-hood/mcp-internals.md).
 
-### 5. Sandbox mode for untrusted code
+### 5. Run in a container for untrusted code
 
-```bash
-claude --sandbox
-```
-
-OS-level sandboxing restricts filesystem and network access regardless of what Claude is instructed to do.
+For untrusted codebases, run Claude Code inside a Docker container or CI runner with restricted filesystem and network access. This provides OS-level isolation that no amount of prompt injection can bypass.
 
 ## What to take away
 

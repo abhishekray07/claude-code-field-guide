@@ -111,10 +111,10 @@ Claude Code has shell access to your machine. The threat model isn't "will Claud
 
 Claude Code has had real security vulnerabilities:
 
-- **CVE-2025-54794:** Prompt injection via crafted file contents could bypass deny rules through subcommand chaining
-- **CVE-2025-54795:** MCP server responses could inject tool use instructions that bypassed permission checks
+- **CVE-2025-54794:** Path restriction bypass — Claude's file path validation used prefix matching, allowing attackers to escape allowed directories with similarly-named paths. Fixed in v0.2.111.
+- **CVE-2025-54795:** Command injection via whitelisted commands — attackers could smuggle unauthorized commands inside allowed ones (e.g., payload structures within `echo`). Fixed in v1.0.20.
 
-These were patched in Claude Code v1.0.16+. Keep Claude Code updated.
+Keep Claude Code updated. Run `claude --version` to check.
 
 ## Threat matrix
 

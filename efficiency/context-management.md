@@ -4,7 +4,7 @@
 
 ## The headline
 
-Your session has ~55K usable tokens for conversation. The other 145K is system prompt, tool definitions, and CLAUDE.md overhead. Every turn sends the entire conversation history. By turn 60, you're spending more on history than on actual work.
+Your session has ~55-75K usable tokens for conversation, depending on MCP servers loaded. The cached prefix (system prompt, tool definitions, CLAUDE.md) consumes ~124K of the 200K context window. Every turn sends the entire conversation history. By turn 60, you're spending more on history than on actual work.
 
 Managing context is the single biggest lever on both cost and output quality.
 
@@ -13,13 +13,20 @@ Managing context is the single biggest lever on both cost and output quality.
 Every API call in Claude Code sends:
 
 ```
-System prompt (~124K tokens, cached after turn 1)
-+ Tool definitions (~17K built-in + MCP overhead)
-+ CLAUDE.md + rules (~2-5K)
+First API call payload (~124K tokens total, cached after turn 1):
+  System prompt text     ~2.5K tokens
+  Built-in tool defs     ~14-17K tokens
+  MCP tool defs          ~5-15K per server
+  CLAUDE.md + rules      varies
+  ─────────────────────────────────
+  Total cached prefix    ~124K tokens (with default MCP setup)
+
 + Full conversation history (grows every turn)
 + Current message
 = Total context per call
 ```
+
+The 124K figure includes everything in the cached prefix: system prompt, tool definitions, MCP tools, and CLAUDE.md. It's all sent together on every call.
 
 The 200K context window is the hard ceiling. Here's where you actually are at different points:
 

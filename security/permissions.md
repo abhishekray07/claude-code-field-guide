@@ -122,18 +122,14 @@ Network:
 
 macOS uses the Seatbelt sandbox profile system (the same technology App Sandbox uses). It's enforced at the kernel level.
 
-**Enabling sandbox mode:**
+**Using sandbox restrictions:**
 
-```bash
-# Restricted sandbox (recommended for untrusted codebases)
-claude --sandbox
+Claude Code doesn't have a single `--sandbox` flag. Instead, sandbox behavior is achieved through the combination of:
+- **Deny rules** in `.claude/settings.json` to block dangerous commands
+- **`--dangerously-skip-permissions`** (avoid this flag — it removes the approval layer)
+- **OS-level sandboxing** via container runtimes (Docker, CI runners) or namespace tools (bubblewrap on Linux)
 
-# Or via settings
-# .claude/settings.json
-{
-  "sandbox": true
-}
-```
+For untrusted codebases, the recommended approach is strict deny rules plus running Claude Code inside a container with restricted filesystem and network access.
 
 ## How the layers work together
 

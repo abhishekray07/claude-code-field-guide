@@ -126,14 +126,11 @@ permissions:
 
 **Network restrictions:**
 
-```yaml
-- name: Review PR (no network)
-  env:
-    ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-  run: |
-    # Claude can call the API but nothing else
-    claude --print --no-network "Review: $(git diff origin/main...HEAD)" > review.md
-```
+Claude Code doesn't have a `--no-network` flag. To restrict network access, use your CI infrastructure:
+
+- **GitHub Actions:** Use a self-hosted runner with firewall rules allowing only `api.anthropic.com`
+- **Kubernetes runners:** Use NetworkPolicy to restrict egress
+- **Docker-based CI:** Use `--network` flags to limit outbound connections
 
 **Secrets:**
 - Store `ANTHROPIC_API_KEY` as a GitHub secret, never in code
