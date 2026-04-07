@@ -1,6 +1,6 @@
 # System Prompt
 
-> Verified with Claude Code v2.1.78, Opus 4.6. Tested March 2026.
+> Verified: Claude Code v2.1.78 | Opus 4.6 | 2026-03-15
 
 ## The headline
 

@@ -1,6 +1,6 @@
 # Tool Use
 
-> Verified with Claude Haiku 3.5, Sonnet 4/4.6, Opus 4/4.6. Tested with Anthropic SDK.
+> Verified: Claude Code v2.1.78 | Haiku 3.5, Sonnet 4/4.6, Opus 4/4.6 | 2026-03-15
 
 ## The headline
 

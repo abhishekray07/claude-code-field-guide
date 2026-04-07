@@ -1,0 +1,41 @@
+# Progress Tracker
+# Started: 2026-04-06
+# Plan: .context/ceo-plan-engineering-handbook.md
+
+## Phase 1a: Polish Existing Content — COMPLETE
+
+## Completed
+- [x] Task 1: Rename stretch-your-limits/ → efficiency/ (commit: 4b55479)
+- [x] Task 2: Standardize version tags across all articles (commit: 63ea029)
+- [x] Task 3: Fix 4 placeholder URLs in recommendations.md (commit: 20008d4)
+- [x] Task 4: Fix token cost ~150 → ~5-15K in mcp-configs.md (commit: bc6be7a)
+- [x] Task 5: Deduplicate configs.md → reference before-after.md (commit: 357a464)
+- [x] Task 6: Expand efficiency/recommendations.md from 2 to 8 tools (commit: 621c62f)
+- [x] Task 7: Link claude-md-templates repo from starter kit (commit: 519a02c)
+- [x] Task 8: Create check-links.sh (commit: ffbf77d)
+- [x] Task 9: Update under-the-hood/README.md, remove coming soon (commit: 60823e3)
+- [x] Task 10: Rebrand README.md as Engineering Handbook (commit: 71fef43)
+
+## Phase 1b: Under-the-Hood + Core Sections
+
+## Completed
+- [x] Task 11: Write under-the-hood/mcp-internals.md (commit: 459b72d)
+- [x] Task 12: Write under-the-hood/agent-teams.md (commit: 5ef16d5)
+  - Updated under-the-hood/README.md with links to both new articles (commit: 23e862c)
+
+- [x] Task 13: Write efficiency/context-management.md (commit: fb63fc5)
+  - Updated efficiency/README.md and root README.md with new links
+- [x] Task 14: Create experiment scripts (commit: 127da25)
+  - token-counting.sh, cache-break-detection.sh, thinking-measurement.sh
+
+## Phase 1b: COMPLETE
+
+## Phase 2: Workflows + Security — COMPLETE
+
+## Completed
+- [x] Task 15: Create workflows/ section (commit: 2231909)
+  - README.md, practitioner-workflows.md, debugging-playbook.md, multi-agent-patterns.md, github-actions.md
+- [x] Task 16: Create security/ section (commit: 0d7ce43)
+  - README.md, threat-model.md, permissions.md, prompt-injection.md, enforcement.md, secrets.md, ci-sandboxing.md
+
+## All phases complete. 37 markdown files, 0 broken links.

@@ -1,10 +1,10 @@
-# Claude Code Field Guide
+# Claude Code Engineering Handbook
 
 How to ship production-quality code with Claude Code.
 
-Most people use Claude Code like a chatbot and get chatbot-quality output. This guide is for people who want to ship real code -- tested, formatted, reviewed, and production-ready -- using Claude Code as a serious engineering tool.
+Most people use Claude Code like a chatbot and get chatbot-quality output. This handbook is for people who want to ship real code -- tested, formatted, reviewed, and production-ready -- using Claude Code as a serious engineering tool.
 
-Every finding here is backed by data from 500+ sessions and 67,000+ API turns. Every config has been tested in production. Every recommendation comes with an opinion on why it matters.
+Every finding here is backed by data from 500+ sessions and 67,000+ API turns. Every config has been tested in production. Every recommendation comes with an opinion on why it matters. Key claims include scripts so you can see the mechanics for yourself.
 
 ## What we learned the hard way
 
@@ -12,7 +12,7 @@ Every finding here is backed by data from 500+ sessions and 67,000+ API turns. E
 - **Use a different model to review Claude's code.** Claude reviewing its own output misses the same things twice. The Codex plugin catches critical issues on every run. Two models > one model reviewing itself. ([cross-model review](ship-quality-code/cross-model-review.md))
 - **Hooks enforce quality at 100%, CLAUDE.md at ~70%.** Auto-format and lint on every file write. Claude sees failures and self-corrects in the same turn. Zero formatting commits in PR review. ([hook recipes](ship-quality-code/hooks.md))
 - **Your CLAUDE.md is the single biggest lever on output quality.** A lean CLAUDE.md with verification directives beats a verbose style guide. Rules in `.claude/rules/` load only when relevant. ([starter kit](ship-quality-code/claude-md-starter/))
-- **92% of your spend happens in mega-sessions (80+ turns).** Long sessions don't just cost more -- quality degrades as context fills up. Break work into focused sessions. ([data](stretch-your-limits/findings.md))
+- **92% of your spend happens in mega-sessions (80+ turns).** Long sessions don't just cost more -- quality degrades as context fills up. Break work into focused sessions. ([data](efficiency/findings.md))
 
 ## Get more findings like these
 
@@ -34,26 +34,45 @@ Configs, hooks, and workflows that make Claude Code produce code you'd actually 
 - [Before/After Showcases](ship-quality-code/before-after.md) -- what these configs actually change (with data)
 - [Recommended Tools](ship-quality-code/recommendations.md) -- curated tools ranked by real community engagement
 
-### [Stretch Your Limits](stretch-your-limits/)
-Get more done per session. Spend your tokens on code, not overhead.
-- [Session Cost Findings](stretch-your-limits/findings.md) -- where your tokens actually go
-- [Prompt Caching](stretch-your-limits/prompt-caching.md) -- how it works, what breaks it
-- [Rate Limit Survival Guide](stretch-your-limits/rate-limits.md) -- why you hit limits fast and how to fix it
-- [Configs That Save Tokens](stretch-your-limits/configs.md) -- copy-paste CLAUDE.md snippets with before/after data
-- [Recommended Tools](stretch-your-limits/recommendations.md) -- tools we actually use for token management
-
 ### [Under the Hood](under-the-hood/)
 How Claude Code actually works. Understanding the mechanics helps you use it better.
 - [Tool Use](under-the-hood/tool-use.md) -- Claude Code is just a while loop
 - [Extended Thinking](under-the-hood/extended-thinking.md) -- what you're paying for (and what's hidden)
 - [System Prompt](under-the-hood/system-prompt.md) -- what Claude Code sends before you type anything
-- [Experiment Scripts](under-the-hood/scripts/) -- reproduce our findings yourself
+- [MCP Internals](under-the-hood/mcp-internals.md) -- every MCP server costs tokens every turn
+- [Agent Teams](under-the-hood/agent-teams.md) -- sub-agents are isolated instances with their own cost
+- [Experiment Scripts](experiment-scripts/) -- see the mechanics for yourself
+
+### [Efficiency](efficiency/)
+Get more done per session. Spend your tokens on code, not overhead.
+- [Session Cost Findings](efficiency/findings.md) -- where your tokens actually go
+- [Context Management](efficiency/context-management.md) -- manage your ~55K usable context window
+- [Prompt Caching](efficiency/prompt-caching.md) -- how it works, what breaks it
+- [Rate Limit Survival Guide](efficiency/rate-limits.md) -- why you hit limits fast and how to fix it
+- [Configs That Save Tokens](efficiency/configs.md) -- copy-paste CLAUDE.md snippets with before/after data
+- [Recommended Tools](efficiency/recommendations.md) -- tools we actually use for token management
+
+### [Workflows](workflows/)
+How real people actually use Claude Code to get work done.
+- [Practitioner Workflows](workflows/practitioner-workflows.md) -- real workflows from daily users
+- [Debugging Playbook](workflows/debugging-playbook.md) -- when things go wrong: symptoms, causes, fixes
+- [Multi-Agent Patterns](workflows/multi-agent-patterns.md) -- sub-agents, teams, and orchestration
+- [GitHub Actions](workflows/github-actions.md) -- Claude Code in CI: automated review and generation
+
+### [Security](security/)
+What can go wrong when you give an AI shell access?
+- [Threat Model](security/threat-model.md) -- prompt injection, data exfiltration, command injection
+- [Permissions](security/permissions.md) -- allow/deny rules, sandbox modes, OS-level isolation
+- [Prompt Injection](security/prompt-injection.md) -- real attack vectors and practical defenses
+- [Enforcement](security/enforcement.md) -- hooks enforce at 100%, CLAUDE.md at ~70%
+- [Secrets Management](security/secrets.md) -- what NOT to put in CLAUDE.md
+- [CI Sandboxing](security/ci-sandboxing.md) -- cost controls and isolation for CI pipelines
 
 ---
 
 ## Freshness
 
-Every finding is tagged with the Claude Code version and date it was verified. Claude Code ships updates weekly, so findings may drift. If you spot something outdated, [open an issue](../../issues) or send a PR.
+Every finding is tagged with the Claude Code version and date it was verified (format: `Verified: Claude Code vX.X.XX | Model | YYYY-MM-DD`). Claude Code ships updates weekly, so findings may drift. If you spot something outdated, open an issue or send a PR.
 
 ## Contributing
 

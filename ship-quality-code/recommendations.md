@@ -1,5 +1,7 @@
 # Recommended Tools for Shipping Quality Code
 
+> Verified: Claude Code v2.1.87 | Opus 4.6 | 2026-04-06
+>
 > Tools and resources ranked by real community engagement. We've tested what we could and noted what we haven't.
 
 ## Code Review
@@ -22,7 +24,7 @@
 **Why it matters:** Found via a Reddit post with 2,288 upvotes: "3 instructions in Anthropic's docs that dramatically reduce hallucination."
 **Setup:** Install as a slash command in your `.claude/commands/` directory.
 
-### [prompt-master](https://github.com/)
+### [prompt-master](https://github.com/nidhinjs/prompt-master)
 **What it does:** A Claude skill that writes better prompts for any AI tool. Scores and iterates on prompt quality.
 **Engagement:** 1,271 Reddit upvotes, 600+ GitHub stars.
 
@@ -37,7 +39,7 @@
 **Engagement:** 307 HN points.
 **Good for:** Multi-step workflows where each step needs a fresh context window.
 
-### [oh-my-claudecode](https://github.com/)
+### [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode)
 **What it does:** Zero-config multi-agent orchestration. 32 specialized agents, 8 orchestration modes, smart model routing that saves 30-50% on tokens.
 **Engagement:** 236 likes / 225 bookmarks on X.
 
@@ -48,8 +50,8 @@
 **Why it matters:** Claude Code can verify its own frontend work instead of guessing. The single biggest quality improvement for web projects.
 **Gotcha:** Adds ~15K tokens to tool definitions. Worth it for web projects.
 
-### [Chrome Extension](https://chromewebstore.google.com/)
-**What it does:** Boris Cherny's recommended tool for frontend work. "Give Claude a way to verify its output. Once you do that, Claude will iterate until the result is great."
+### [Claude Chrome Extension](https://howborisusesclaudecode.com)
+**What it does:** Boris Cherny's recommended tool for frontend work. "Give Claude a way to verify its output. Once you do that, Claude will iterate until the result is great." Boris uses it every time he works on web code.
 **Engagement:** 1,226 likes / 1,376 bookmarks.
 
 ## Context & Documentation
@@ -85,7 +87,7 @@
 **What it is:** A meta-skill that runs your skill 10 times, scores against eval criteria, rewrites the prompt, retests, and keeps the winner. 823 likes / 1,357 bookmarks.
 **Good for:** Any skill that's inconsistent -- great 70% of the time, unusable the other 30%.
 
-### [Golang Production Skills](https://github.com/)
+### [Golang Production Skills](https://github.com/samber/cc-skills-golang)
 **What it is:** Claude Code skills specifically for production-ready Go projects. 401 likes / 526 bookmarks.
 
 ### [Boris Cherny's /loop workflows](https://x.com/bcherny/)

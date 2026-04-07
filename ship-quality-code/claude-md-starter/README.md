@@ -21,6 +21,8 @@ The `## Verification` block is the highest-leverage addition to any CLAUDE.md. W
 
 - **[CLAUDE.md](CLAUDE.md)** -- the starter template. Copy this to your project root and customize.
 
+**Want more templates?** The [claude-md-templates](https://github.com/abhishekray07/claude-md-templates) repo has stack-specific CLAUDE.md templates for Next.js, Python, Go, Rust, and more.
+
 ## What goes where
 
 | Content | Where | Why |

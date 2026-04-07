@@ -1,6 +1,8 @@
 # Configs That Save Tokens
 
-> Copy-paste these into your CLAUDE.md or settings. Each one has been tested with before/after data.
+> Verified: Claude Code v2.1.87 | Opus 4.6 | 2026-04-06
+>
+> Copy-paste these into your CLAUDE.md or settings. Each one has been tested with before/after data. See [Before/After Showcases](../ship-quality-code/before-after.md) for the full metrics behind these recommendations.
 
 ## Keep CLAUDE.md concise
 

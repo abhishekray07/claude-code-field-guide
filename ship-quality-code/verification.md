@@ -1,5 +1,7 @@
 # Verification Workflows
 
+> Verified: Claude Code v2.1.87 | Opus 4.6, Sonnet 4.6 | 2026-04-06
+>
 > The single highest-engagement Claude Code topic on the internet. A viral CLAUDE.md with verification directives hit 15,987 bookmarks on X in March 2026. People want Claude to prove its work before saying "done."
 
 ## The problem

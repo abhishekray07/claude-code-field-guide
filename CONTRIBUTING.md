@@ -20,7 +20,7 @@ We welcome contributions. This repo is opinionated and data-backed, so we have a
 
 1. Fork the repo
 2. Add your contribution to the appropriate section
-3. Include a "Verified with Claude Code vX.Y.Z on YYYY-MM-DD" tag
+3. Include a `Verified: Claude Code vX.X.XX | Model | YYYY-MM-DD` tag
 4. Open a PR with a clear description of what you found and how
 
 ## Freshness
