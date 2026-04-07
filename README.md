@@ -39,11 +39,14 @@ How Claude Code actually works. Understanding the mechanics helps you use it bet
 - [Tool Use](under-the-hood/tool-use.md) -- Claude Code is just a while loop
 - [Extended Thinking](under-the-hood/extended-thinking.md) -- what you're paying for (and what's hidden)
 - [System Prompt](under-the-hood/system-prompt.md) -- what Claude Code sends before you type anything
+- [MCP Internals](under-the-hood/mcp-internals.md) -- every MCP server costs tokens every turn
+- [Agent Teams](under-the-hood/agent-teams.md) -- sub-agents are isolated instances with their own cost
 - [Experiment Scripts](experiment-scripts/) -- see the mechanics for yourself
 
 ### [Efficiency](efficiency/)
 Get more done per session. Spend your tokens on code, not overhead.
 - [Session Cost Findings](efficiency/findings.md) -- where your tokens actually go
+- [Context Management](efficiency/context-management.md) -- manage your ~55K usable context window
 - [Prompt Caching](efficiency/prompt-caching.md) -- how it works, what breaks it
 - [Rate Limit Survival Guide](efficiency/rate-limits.md) -- why you hit limits fast and how to fix it
 - [Configs That Save Tokens](efficiency/configs.md) -- copy-paste CLAUDE.md snippets with before/after data

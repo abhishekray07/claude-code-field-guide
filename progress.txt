@@ -18,9 +18,12 @@
 
 ## Phase 1b: Under-the-Hood + Core Sections
 
+## Completed
+- [x] Task 11: Write under-the-hood/mcp-internals.md (commit: 459b72d)
+- [x] Task 12: Write under-the-hood/agent-teams.md (commit: 5ef16d5)
+  - Updated under-the-hood/README.md with links to both new articles (commit: 23e862c)
+
 ## Current
-Task 11: Write under-the-hood/mcp-internals.md
-Task 12: Write under-the-hood/agent-teams.md
 Task 13: Write efficiency/context-management.md
 Task 14: Create experiment scripts (3 shell scripts)
 
