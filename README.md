@@ -52,6 +52,22 @@ Get more done per session. Spend your tokens on code, not overhead.
 - [Configs That Save Tokens](efficiency/configs.md) -- copy-paste CLAUDE.md snippets with before/after data
 - [Recommended Tools](efficiency/recommendations.md) -- tools we actually use for token management
 
+### [Workflows](workflows/)
+How real people actually use Claude Code to get work done.
+- [Practitioner Workflows](workflows/practitioner-workflows.md) -- real workflows from daily users
+- [Debugging Playbook](workflows/debugging-playbook.md) -- when things go wrong: symptoms, causes, fixes
+- [Multi-Agent Patterns](workflows/multi-agent-patterns.md) -- sub-agents, teams, and orchestration
+- [GitHub Actions](workflows/github-actions.md) -- Claude Code in CI: automated review and generation
+
+### [Security](security/)
+What can go wrong when you give an AI shell access?
+- [Threat Model](security/threat-model.md) -- prompt injection, data exfiltration, command injection
+- [Permissions](security/permissions.md) -- allow/deny rules, sandbox modes, OS-level isolation
+- [Prompt Injection](security/prompt-injection.md) -- real attack vectors and practical defenses
+- [Enforcement](security/enforcement.md) -- hooks enforce at 100%, CLAUDE.md at ~70%
+- [Secrets Management](security/secrets.md) -- what NOT to put in CLAUDE.md
+- [CI Sandboxing](security/ci-sandboxing.md) -- cost controls and isolation for CI pipelines
+
 ---
 
 ## Freshness

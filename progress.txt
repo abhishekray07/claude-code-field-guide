@@ -23,8 +23,19 @@
 - [x] Task 12: Write under-the-hood/agent-teams.md (commit: 5ef16d5)
   - Updated under-the-hood/README.md with links to both new articles (commit: 23e862c)
 
-## Current
-Task 13: Write efficiency/context-management.md
-Task 14: Create experiment scripts (3 shell scripts)
+- [x] Task 13: Write efficiency/context-management.md (commit: fb63fc5)
+  - Updated efficiency/README.md and root README.md with new links
+- [x] Task 14: Create experiment scripts (commit: 127da25)
+  - token-counting.sh, cache-break-detection.sh, thinking-measurement.sh
 
-## Phase 2: Workflows + Security (not started)
+## Phase 1b: COMPLETE
+
+## Phase 2: Workflows + Security — COMPLETE
+
+## Completed
+- [x] Task 15: Create workflows/ section (commit: 2231909)
+  - README.md, practitioner-workflows.md, debugging-playbook.md, multi-agent-patterns.md, github-actions.md
+- [x] Task 16: Create security/ section (commit: 0d7ce43)
+  - README.md, threat-model.md, permissions.md, prompt-injection.md, enforcement.md, secrets.md, ci-sandboxing.md
+
+## All phases complete. 37 markdown files, 0 broken links.
