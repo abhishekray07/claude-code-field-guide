@@ -1,10 +1,10 @@
-# Claude Code Field Guide
+# Claude Code Engineering Handbook
 
 How to ship production-quality code with Claude Code.
 
-Most people use Claude Code like a chatbot and get chatbot-quality output. This guide is for people who want to ship real code -- tested, formatted, reviewed, and production-ready -- using Claude Code as a serious engineering tool.
+Most people use Claude Code like a chatbot and get chatbot-quality output. This handbook is for people who want to ship real code -- tested, formatted, reviewed, and production-ready -- using Claude Code as a serious engineering tool.
 
-Every finding here is backed by data from 500+ sessions and 67,000+ API turns. Every config has been tested in production. Every recommendation comes with an opinion on why it matters.
+Every finding here is backed by data from 500+ sessions and 67,000+ API turns. Every config has been tested in production. Every recommendation comes with an opinion on why it matters. Key claims include scripts so you can see the mechanics for yourself.
 
 ## What we learned the hard way
 
@@ -34,6 +34,13 @@ Configs, hooks, and workflows that make Claude Code produce code you'd actually 
 - [Before/After Showcases](ship-quality-code/before-after.md) -- what these configs actually change (with data)
 - [Recommended Tools](ship-quality-code/recommendations.md) -- curated tools ranked by real community engagement
 
+### [Under the Hood](under-the-hood/)
+How Claude Code actually works. Understanding the mechanics helps you use it better.
+- [Tool Use](under-the-hood/tool-use.md) -- Claude Code is just a while loop
+- [Extended Thinking](under-the-hood/extended-thinking.md) -- what you're paying for (and what's hidden)
+- [System Prompt](under-the-hood/system-prompt.md) -- what Claude Code sends before you type anything
+- [Experiment Scripts](experiment-scripts/) -- see the mechanics for yourself
+
 ### [Efficiency](efficiency/)
 Get more done per session. Spend your tokens on code, not overhead.
 - [Session Cost Findings](efficiency/findings.md) -- where your tokens actually go
@@ -42,18 +49,11 @@ Get more done per session. Spend your tokens on code, not overhead.
 - [Configs That Save Tokens](efficiency/configs.md) -- copy-paste CLAUDE.md snippets with before/after data
 - [Recommended Tools](efficiency/recommendations.md) -- tools we actually use for token management
 
-### [Under the Hood](under-the-hood/)
-How Claude Code actually works. Understanding the mechanics helps you use it better.
-- [Tool Use](under-the-hood/tool-use.md) -- Claude Code is just a while loop
-- [Extended Thinking](under-the-hood/extended-thinking.md) -- what you're paying for (and what's hidden)
-- [System Prompt](under-the-hood/system-prompt.md) -- what Claude Code sends before you type anything
-- [Experiment Scripts](under-the-hood/scripts/) -- reproduce our findings yourself
-
 ---
 
 ## Freshness
 
-Every finding is tagged with the Claude Code version and date it was verified. Claude Code ships updates weekly, so findings may drift. If you spot something outdated, [open an issue](../../issues) or send a PR.
+Every finding is tagged with the Claude Code version and date it was verified (format: `Verified: Claude Code vX.X.XX | Model | YYYY-MM-DD`). Claude Code ships updates weekly, so findings may drift. If you spot something outdated, open an issue or send a PR.
 
 ## Contributing
 
